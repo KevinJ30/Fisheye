@@ -1,15 +1,5 @@
 //Fonction asynchrone avec l'API fetch qui récupère les données des photographes 
 //Asynchronous function with the fetch API which retrieves data from photographers
-async function getPhotographers() {
-    try {
-        const response = await fetch("./data/photographers.json");
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error(error);
-        return { photographers: [] };
-    }
-}
 
 async function displayData(photographers) {
     const photographersSection = document.querySelector(".photographer_section");
