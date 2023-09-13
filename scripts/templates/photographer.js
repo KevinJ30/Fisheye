@@ -2,15 +2,15 @@
 //function to create and display a phtographer on index page
 function photographerTemplate(data) {
     const { name, id, city, portrait, country, tagline, price } = data; //Destructuration de l'objet data pour permettre de récupérer facilement la clé name, id, city...
-                                                                        //Destructuring the data object to allow easy recovery of the name, id, city key.
-    const picture = `../../assets/photographers/${portrait}`;
+    //Destructuring the data object to allow easy recovery of the name, id, city key.
+    const picture = `./assets/photographers/${portrait}`;
 
     function getUserCardDOM() {
         const article = document.createElement("article");
         const anchor = document.createElement("a");
 
-//Permets de passer un lien cliqué vers la page photographer
-//Allows you to pass a clicked link to the photographer page
+        //Permets de passer un lien cliqué vers la page photographer
+        //Allows you to pass a clicked link to the photographer page
         anchor.href = "./photographer.html?id=" + id;
 
         anchor.ariaLabel = name;
